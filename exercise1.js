@@ -4,6 +4,21 @@
 
 class Car {
   // YOUR CODE HERE
+  constructor(make, model, year) {
+    this._make = make;
+    this._model = model;
+    this._year = year;
+  }
+
+  getCarInfo() {
+    return `Make: ${this._make}, Model: ${this._model}, Year: ${this._year}`;
+  }
+
+  setYear(newYear) {
+    if (newYear >= this._year) {
+      this._year = newYear;
+    }
+  }
 }
 
 

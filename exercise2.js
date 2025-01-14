@@ -7,6 +7,25 @@
 
 class BankAccount {
   // YOUR CODE HERE
+  constructor(accountNumber, balance) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+  }
+
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+    }
+  }
+
+  static compareAccounts(account1, account2) {
+    return account1.balance > account2.balance ? account1 : account2;
+  }
+
 }
 
 
